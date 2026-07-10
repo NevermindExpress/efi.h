@@ -1,0 +1,10 @@
+#pragma once
+#include "types.h"
+#include "console/common.h"
+#include "console/simpletextinputex.h"
+#include "console/simpletextinput.h"
+#include "console/simpletextoutput.h"
+#include "console/simplepointer.h"
+#include "console/abspointer.h"
+#include "console/serial.h"
+#include "console/gop.h"

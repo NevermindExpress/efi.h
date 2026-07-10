@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="runtimeservices">
+      <UniqueIdentifier>{73b4f1a8-016c-46e7-a050-9759f78ef581}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="bootservices">
+      <UniqueIdentifier>{28ab3513-1ae1-462d-9be6-1a2ccc269b77}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocols">
+      <UniqueIdentifier>{cb78ee96-5def-497e-9a3e-6c2303bc2920}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocols\console">
+      <UniqueIdentifier>{0f978af1-2e3c-46fb-a72b-5b10f84ef7bc}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="bootservices\tpl.h">
+      <Filter>bootservices</Filter>
+    </ClInclude>
+    <ClInclude Include="bootservices\memory.h">
+      <Filter>bootservices</Filter>
+    </ClInclude>
+    <ClInclude Include="bootservices\event.h">
+      <Filter>bootservices</Filter>
+    </ClInclude>
+    <ClInclude Include="bootservices\protocol.h">
+      <Filter>bootservices</Filter>
+    </ClInclude>
+    <ClInclude Include="bootservices\image.h">
+      <Filter>bootservices</Filter>
+    </ClInclude>
+    <ClInclude Include="bootservices\misc.h">
+      <Filter>bootservices</Filter>
+    </ClInclude>
+    <ClInclude Include="bootservices.h" />
+    <ClInclude Include="configtable.h" />
+    <ClInclude Include="runtimeservices.h" />
+    <ClInclude Include="systemtable.h" />
+    <ClInclude Include="types.h" />
+    <ClInclude Include="runtimeservices\variable.h">
+      <Filter>runtimeservices</Filter>
+    </ClInclude>
+    <ClInclude Include="runtimeservices\time.h">
+      <Filter>runtimeservices</Filter>
+    </ClInclude>
+    <ClInclude Include="runtimeservices\memory.h">
+      <Filter>runtimeservices</Filter>
+    </ClInclude>
+    <ClInclude Include="runtimeservices\misc.h">
+      <Filter>runtimeservices</Filter>
+    </ClInclude>
+    <ClInclude Include="runtimeservices\capsule.h">
+      <Filter>runtimeservices</Filter>
+    </ClInclude>
+    <ClInclude Include="efi.h" />
+    <ClInclude Include="protocols.h" />
+    <ClInclude Include="protocols\loadedimage.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="protocols\devicepath.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="protocols\console.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="protocols\console\simpletextinputex.h">
+      <Filter>protocols\console</Filter>
+    </ClInclude>
+    <ClInclude Include="protocols\console\common.h">
+      <Filter>protocols\console</Filter>
+    </ClInclude>
+    <ClInclude Include="protocols\console\simpletextoutput.h">
+      <Filter>protocols\console</Filter>
+    </ClInclude>
+    <ClInclude Include="protocols\console\simpletextinput.h">
+      <Filter>protocols\console</Filter>
+    </ClInclude>
+    <ClInclude Include="protocols\console\simplepointer.h">
+      <Filter>protocols\console</Filter>
+    </ClInclude>
+    <ClInclude Include="protocols\console\abspointer.h">
+      <Filter>protocols\console</Filter>
+    </ClInclude>
+    <ClInclude Include="protocols\console\serial.h">
+      <Filter>protocols\console</Filter>
+    </ClInclude>
+    <ClInclude Include="protocols\console\gop.h">
+      <Filter>protocols\console</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test.c" />
+  </ItemGroup>
+</Project>
