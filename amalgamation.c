@@ -14,10 +14,10 @@
 #pragma warning(disable:4996)
 
 struct file {
-	char name[64];
+	char name[128];
 };
 
-struct file files[64] = { 0 };
+struct file files[96] = { 0 };
 int nFiles = 0;
 FILE* out = NULL;
 char line[1024] = "";

@@ -74,6 +74,84 @@
       <Filter>runtimeservices</Filter>
     </ClInclude>
     <ClInclude Include="..\efi.h" />
+    <ClInclude Include="..\efi\protocols\drivermodel.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\drivermodel\binding.h">
+      <Filter>protocols\drivermodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\drivermodel\override.h">
+      <Filter>protocols\drivermodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\drivermodel\diagnostics.h">
+      <Filter>protocols\drivermodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\drivermodel\componentname.h">
+      <Filter>protocols\drivermodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\drivermodel\p2dc.h">
+      <Filter>protocols\drivermodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\drivermodel\supportedefiver.h">
+      <Filter>protocols\drivermodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\drivermodel\driverhealth.h">
+      <Filter>protocols\drivermodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\drivermodel\adapterinfo.h">
+      <Filter>protocols\drivermodel</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media\loadfile.h">
+      <Filter>protocols\media</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media\simplefs.h">
+      <Filter>protocols\media</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media\file.h">
+      <Filter>protocols\media</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media\tape.h">
+      <Filter>protocols\media</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media\diskio.h">
+      <Filter>protocols\media</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media\blockio.h">
+      <Filter>protocols\media</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media\crypto.h">
+      <Filter>protocols\media</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media\eraseblock.h">
+      <Filter>protocols\media</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media\atapassthrough.h">
+      <Filter>protocols\media</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media\ssc.h">
+      <Filter>protocols\media</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media\nvmepassthrough.h">
+      <Filter>protocols\media</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media\sdpassthrough.h">
+      <Filter>protocols\media</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media\ramdisk.h">
+      <Filter>protocols\media</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media\partinfo.h">
+      <Filter>protocols\media</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media\nvdimm.h">
+      <Filter>protocols\media</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media\ufs.h">
+      <Filter>protocols\media</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\media.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="bootservices">
@@ -87,6 +165,12 @@
     </Filter>
     <Filter Include="runtimeservices">
       <UniqueIdentifier>{b25674b8-2785-43db-8270-5d76ef9f8dee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocols\drivermodel">
+      <UniqueIdentifier>{c733d5c5-4c20-4e2a-bfd6-fcffd6ec8e3a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocols\media">
+      <UniqueIdentifier>{1872b478-2c1c-49b6-b37c-4b097dfbe761}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>
