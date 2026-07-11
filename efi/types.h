@@ -1,10 +1,10 @@
 #pragma once
 
 // INTN
-#ifdef _M_IX86
-	typedef long INTN;
-	typedef unsigned long UINTN;
-#elif defined(_M_AMD64)
+#ifdef _M_IX86 || defined(__i386__)
+	typedef int INTN;
+	typedef unsigned int UINTN;
+#elif defined(_M_AMD64) || defined(__x86_64__) || defined(__amd64__)
 	typedef long long INTN;
 	typedef unsigned long long UINTN;
 #endif
@@ -15,10 +15,10 @@ typedef char INT8;
 typedef unsigned char UINT8;
 typedef short INT16;
 typedef unsigned short UINT16;
-typedef long INT32;
-typedef unsigned long UINT32;
-typedef __int64 INT64;
-typedef unsigned __int64 UINT64;
+typedef int INT32;
+typedef unsigned int UINT32;
+typedef long long INT64;
+typedef unsigned long long UINT64;
 // typedef __int128 UINT128;
 // typedef __int128 UINT128;
 typedef char CHAR8;
@@ -79,7 +79,7 @@ typedef struct {
 // Semantical modifiers
 #ifdef __Shirley__
 	// ...
-#elif defined(_MSC_VER)
+#elif defined(_MSC_VER) && !defined(__clang__)
 	#include <sal.h>
 	#define IN _In_
 	#define OUT _Out_
@@ -93,12 +93,14 @@ typedef struct {
 #define CONST const
 
 // Calling conventions
-#ifdef _M_IX86
+#ifdef _M_IX86 || defined(__i386__)
 	#define EFIAPI __cdecl
-#elif defined(_M_AMD64)
-	#if defined(_MSC_VER) || defined(__Shirley__)
+#elif defined(_M_AMD64) || defined(__x86_64__) || defined(__amd64__)
+	#if defined(_MSC_VER) || defined(__Shirley__) && !defined(__clang__)
 		#define EFIAPI // Already always Microsoft x64 ABI
 	#else
 		#define EFIAPI __attribute__((__ms_abi__))
 	#endif
+#else
+	#error Unsupported architecture.
 #endif

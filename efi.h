@@ -1,19 +1,21 @@
 #pragma once
 
-//                                                         
-//                                                         
-//        __.....__               .--.         .           
-//    .-''         '.        _.._ |__|       .'|           
-//   /     .-''"'-.  `.    .' .._|.--.      <  |           
-//  /     /________\   \   | '    |  |       | |           
-//  |                  | __| |__  |  |       | | .'''-.    
-//  \    .-------------'|__   __| |  |       | |/.'''. \   
-//   \    '-.____...---.   | |    |  | ,.--. |  /    | |   
-//    `.             .'    | |    |__|//    \| |     | |   
-//      `''-...... -'      | |        \\    /| |     | |   
-//                         | |         `'--' | '.    | '.  
-//                         |_|               '---'   '---' 
-// https://github.com/NevermindExpress/efi.h
+/*
+                                                         
+                                                         
+        __.....__               .--.         .           
+    .-''         '.        _.._ |__|       .'|           
+   /     .-''"'-.  `.    .' .._|.--.      <  |           
+  /     /________\   \   | '    |  |       | |           
+  |                  | __| |__  |  |       | | .'''-.    
+  \    .-------------'|__   __| |  |       | |/.'''. \   
+   \    '-.____...---.   | |    |  | ,.--. |  /    | |   
+    `.             .'    | |    |__|//    \| |     | |   
+      `''-...... -'      | |        \\    /| |     | |   
+                         | |         `'--' | '.    | '.  
+                         |_|               '---'   '---' 
+ https://github.com/NevermindExpress/efi.h
+                                                            */
 
 #include "efi/types.h"
 #include "efi/protocols.h"
@@ -28,5 +30,5 @@ typedef EFI_STATUS (EFIAPI *EFI_IMAGE_ENTRY_POINT) (
   );
 
 #ifdef _MSC_VER
-#pragma comment(linker, "/ENTRY:EfiMain /MANIFEST:NO /DYNAMICBASE:NO")
+    #pragma comment(linker, "/ENTRY:EfiMain")
 #endif

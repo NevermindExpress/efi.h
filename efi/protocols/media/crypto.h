@@ -59,7 +59,7 @@ typedef struct {
 	BOOLEAN                         Supported;
 	UINT64                          KeyCount;
 	UINT64                          CapabilityCount;
-	EFI_BLOCK_IO_CRYPTO_CAPABILITY*  Capabilities// flexible array of the singular type
+	EFI_BLOCK_IO_CRYPTO_CAPABILITY*  Capabilities;// flexible array of the singular type
 } EFI_BLOCK_IO_CRYPTO_CAPABILITIES;
 
 typedef EFI_STATUS (EFIAPI *EFI_BLOCK_IO_CRYPTO_GET_CAPABILITIES) (

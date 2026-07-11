@@ -1,16 +1,17 @@
-#include "efi-amalgamation.h"
-#include <vcruntime.h>
+#include "efi.h"
 
 EFI_STATUS EFIAPI EfiMain(IN EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTable) {
+	_Static_assert(sizeof(EFI_GUID) == 16, "EFI_GUID size mismatch");
+	_Static_assert(sizeof(EFI_TABLE_HEADER) == 24, "EFI_TABLE_HEADER size mismatch");
 	EFI_BOOT_SERVICES* bs = SystemTable->BootServices;
 	EFI_GUID gopGuid = EFI_GRAPHICS_OUTPUT_PROTOCOL_GUID;
 	UINTN        HandleCount;
-	EFI_HANDLE   *HandleBuffer = NULL;
+	EFI_HANDLE   *HandleBuffer = 0;
 	EFI_GRAPHICS_OUTPUT_PROTOCOL *gop;
 
-	EFI_STATUS Status = bs->LocateHandleBuffer(ByProtocol, &gopGuid, NULL, &HandleCount, &HandleBuffer);
+	EFI_STATUS Status = bs->LocateHandleBuffer(ByProtocol, &gopGuid, 0, &HandleCount, &HandleBuffer);
 
-	for (size_t i = 0; i < HandleCount; i++) {
+	for (UINT64 i = 0; i < HandleCount; i++) {
 		bs->HandleProtocol(HandleBuffer[i], &gopGuid, (VOID **)&gop);
 		gop->SetMode(gop, 0);
 	}
@@ -19,11 +20,11 @@ EFI_STATUS EFIAPI EfiMain(IN EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTab
 	while (1) {
 		if (j > 255) j = 0;
 
-		for (size_t i = 0; i < HandleCount; i++) {
+		for (UINT64 i = 0; i < HandleCount; i++) {
 			bs->HandleProtocol(HandleBuffer[i], &gopGuid, (VOID **)&gop);
-			char* fb = gop->Mode->FrameBufferBase;
+			char* fb = (char*)gop->Mode->FrameBufferBase;
 
-			for (size_t k = 0; k < gop->Mode->FrameBufferSize; k++) {
+			for (UINT64 k = 0; k < gop->Mode->FrameBufferSize; k++) {
 				fb[k] = j;
 			}
 		}

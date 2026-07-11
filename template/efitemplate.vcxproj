@@ -18,6 +18,9 @@
       <Platform>x64</Platform>
     </ProjectConfiguration>
   </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="test.c" />
+  </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>18.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
@@ -87,7 +90,7 @@
     <TargetName>bootx64</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
-    <IncludePath>$(SolutionDir);$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)..;$(IncludePath)</IncludePath>
     <TargetExt>.efi</TargetExt>
     <GenerateManifest>false</GenerateManifest>
     <OutDir>$(SolutionDir)Out\$(PlatformTarget)\$(Configuration)\EFI2\BOOT</OutDir>
@@ -95,7 +98,7 @@
     <TargetName>bootx64</TargetName>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
-    <IncludePath>$(SolutionDir);$(IncludePath)</IncludePath>
+    <IncludePath>$(ProjectDir)..;$(IncludePath)</IncludePath>
     <TargetExt>.efi</TargetExt>
     <GenerateManifest>false</GenerateManifest>
     <OutDir>$(SolutionDir)Out\$(PlatformTarget)\$(Configuration)\EFI2\BOOT</OutDir>
@@ -190,66 +193,6 @@
       <EnableSegmentHeap>true</EnableSegmentHeap>
     </Manifest>
   </ItemDefinitionGroup>
-  <ItemGroup>
-    <ClInclude Include="..\efi\bootservices.h" />
-    <ClInclude Include="..\efi\bootservices\event.h" />
-    <ClInclude Include="..\efi\bootservices\image.h" />
-    <ClInclude Include="..\efi\bootservices\memory.h" />
-    <ClInclude Include="..\efi\bootservices\misc.h" />
-    <ClInclude Include="..\efi\bootservices\protocol.h" />
-    <ClInclude Include="..\efi\bootservices\tpl.h" />
-    <ClInclude Include="..\efi\configtable.h" />
-    <ClInclude Include="..\efi.h" />
-    <ClInclude Include="..\efi\protocols.h" />
-    <ClInclude Include="..\efi\protocols\console.h" />
-    <ClInclude Include="..\efi\protocols\console\abspointer.h" />
-    <ClInclude Include="..\efi\protocols\console\common.h" />
-    <ClInclude Include="..\efi\protocols\console\gop.h" />
-    <ClInclude Include="..\efi\protocols\console\serial.h" />
-    <ClInclude Include="..\efi\protocols\console\simplepointer.h" />
-    <ClInclude Include="..\efi\protocols\console\simpletextinput.h" />
-    <ClInclude Include="..\efi\protocols\console\simpletextinputex.h" />
-    <ClInclude Include="..\efi\protocols\console\simpletextoutput.h" />
-    <ClInclude Include="..\efi\protocols\devicepath.h" />
-    <ClInclude Include="..\efi\protocols\drivermodel.h" />
-    <ClInclude Include="..\efi\protocols\drivermodel\adapterinfo.h" />
-    <ClInclude Include="..\efi\protocols\drivermodel\binding.h" />
-    <ClInclude Include="..\efi\protocols\drivermodel\componentname.h" />
-    <ClInclude Include="..\efi\protocols\drivermodel\diagnostics.h" />
-    <ClInclude Include="..\efi\protocols\drivermodel\driverhealth.h" />
-    <ClInclude Include="..\efi\protocols\drivermodel\override.h" />
-    <ClInclude Include="..\efi\protocols\drivermodel\p2dc.h" />
-    <ClInclude Include="..\efi\protocols\drivermodel\supportedefiver.h" />
-    <ClInclude Include="..\efi\protocols\loadedimage.h" />
-    <ClInclude Include="..\efi\protocols\media.h" />
-    <ClInclude Include="..\efi\protocols\media\atapassthrough.h" />
-    <ClInclude Include="..\efi\protocols\media\blockio.h" />
-    <ClInclude Include="..\efi\protocols\media\crypto.h" />
-    <ClInclude Include="..\efi\protocols\media\diskio.h" />
-    <ClInclude Include="..\efi\protocols\media\eraseblock.h" />
-    <ClInclude Include="..\efi\protocols\media\file.h" />
-    <ClInclude Include="..\efi\protocols\media\loadfile.h" />
-    <ClInclude Include="..\efi\protocols\media\nvdimm.h" />
-    <ClInclude Include="..\efi\protocols\media\nvmepassthrough.h" />
-    <ClInclude Include="..\efi\protocols\media\partinfo.h" />
-    <ClInclude Include="..\efi\protocols\media\ramdisk.h" />
-    <ClInclude Include="..\efi\protocols\media\sdpassthrough.h" />
-    <ClInclude Include="..\efi\protocols\media\simplefs.h" />
-    <ClInclude Include="..\efi\protocols\media\ssc.h" />
-    <ClInclude Include="..\efi\protocols\media\tape.h" />
-    <ClInclude Include="..\efi\protocols\media\ufs.h" />
-    <ClInclude Include="..\efi\runtimeservices.h" />
-    <ClInclude Include="..\efi\runtimeservices\capsule.h" />
-    <ClInclude Include="..\efi\runtimeservices\memory.h" />
-    <ClInclude Include="..\efi\runtimeservices\misc.h" />
-    <ClInclude Include="..\efi\runtimeservices\time.h" />
-    <ClInclude Include="..\efi\runtimeservices\variable.h" />
-    <ClInclude Include="..\efi\systemtable.h" />
-    <ClInclude Include="..\efi\types.h" />
-  </ItemGroup>
-  <ItemGroup>
-    <ClCompile Include="..\template\test.c" />
-  </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>

@@ -65,7 +65,7 @@ typedef struct {
 
 typedef struct {
 	UINT64                       CommandTimeout;
-	VOID                         TransferBuffer OPTIONAL;
+	VOID                         *TransferBuffer OPTIONAL;
 	UINT32                       TransferLength OPTIONAL;
 	VOID                         *MetaDataBuffer OPTIONAL;
 	UINT32                       MetadataLength OPTIONAL;
