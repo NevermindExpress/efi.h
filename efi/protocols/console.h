@@ -1,0 +1,10 @@
+#pragma once
+#include "efi/types.h"
+#include "efi/protocols/console/common.h"
+#include "efi/protocols/console/simpletextinputex.h"
+#include "efi/protocols/console/simpletextinput.h"
+#include "efi/protocols/console/simpletextoutput.h"
+#include "efi/protocols/console/simplepointer.h"
+#include "efi/protocols/console/abspointer.h"
+#include "efi/protocols/console/serial.h"
+#include "efi/protocols/console/gop.h"

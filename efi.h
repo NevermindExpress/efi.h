@@ -1,10 +1,25 @@
 #pragma once
 
-#include "types.h"
-#include "protocols.h"
-#include "bootservices.h"
-#include "runtimeservices.h"
-#include "systemtable.h"
+//                                                         
+//                                                         
+//        __.....__               .--.         .           
+//    .-''         '.        _.._ |__|       .'|           
+//   /     .-''"'-.  `.    .' .._|.--.      <  |           
+//  /     /________\   \   | '    |  |       | |           
+//  |                  | __| |__  |  |       | | .'''-.    
+//  \    .-------------'|__   __| |  |       | |/.'''. \   
+//   \    '-.____...---.   | |    |  | ,.--. |  /    | |   
+//    `.             .'    | |    |__|//    \| |     | |   
+//      `''-...... -'      | |        \\    /| |     | |   
+//                         | |         `'--' | '.    | '.  
+//                         |_|               '---'   '---' 
+// https://github.com/NevermindExpress/efi.h
+
+#include "efi/types.h"
+#include "efi/protocols.h"
+#include "efi/bootservices.h"
+#include "efi/runtimeservices.h"
+#include "efi/systemtable.h"
 
 // The Entry Point prototype, first thing the developer would use...
 typedef EFI_STATUS (EFIAPI *EFI_IMAGE_ENTRY_POINT) (

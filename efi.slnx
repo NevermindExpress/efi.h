@@ -3,5 +3,6 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="efi.vcxproj" Id="47c18378-591b-4d5d-92a2-7f6472924ed6" />
+  <Project Path=".vs/amalgamation.vcxproj" Id="958666c2-23fb-454e-a56c-13e7a43c1e4d" />
+  <Project Path=".vs\efi.vcxproj" Id="47c18378-591b-4d5d-92a2-7f6472924ed6" />
 </Solution>

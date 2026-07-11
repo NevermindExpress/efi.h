@@ -1,0 +1,95 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <ClInclude Include="..\efi\bootservices.h" />
+    <ClInclude Include="..\efi\configtable.h" />
+    <ClInclude Include="..\efi\protocols.h" />
+    <ClInclude Include="..\efi\runtimeservices.h" />
+    <ClInclude Include="..\efi\systemtable.h" />
+    <ClInclude Include="..\efi\types.h" />
+    <ClInclude Include="..\efi\bootservices\event.h">
+      <Filter>bootservices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\bootservices\image.h">
+      <Filter>bootservices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\bootservices\memory.h">
+      <Filter>bootservices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\bootservices\misc.h">
+      <Filter>bootservices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\bootservices\protocol.h">
+      <Filter>bootservices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\bootservices\tpl.h">
+      <Filter>bootservices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\console.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\devicepath.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\loadedimage.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\console\abspointer.h">
+      <Filter>protocols\console</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\console\common.h">
+      <Filter>protocols\console</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\console\gop.h">
+      <Filter>protocols\console</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\console\serial.h">
+      <Filter>protocols\console</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\console\simplepointer.h">
+      <Filter>protocols\console</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\console\simpletextinput.h">
+      <Filter>protocols\console</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\console\simpletextinputex.h">
+      <Filter>protocols\console</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\console\simpletextoutput.h">
+      <Filter>protocols\console</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\runtimeservices\capsule.h">
+      <Filter>runtimeservices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\runtimeservices\memory.h">
+      <Filter>runtimeservices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\runtimeservices\misc.h">
+      <Filter>runtimeservices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\runtimeservices\time.h">
+      <Filter>runtimeservices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\runtimeservices\variable.h">
+      <Filter>runtimeservices</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Filter Include="bootservices">
+      <UniqueIdentifier>{3ce7be68-b7d2-4795-a6b9-5119fd41f252}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocols">
+      <UniqueIdentifier>{969ac6fd-5587-4780-94e3-72544468d783}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocols\console">
+      <UniqueIdentifier>{2d1e510e-941e-4cf2-be2e-d4ab0ffd7fb7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="runtimeservices">
+      <UniqueIdentifier>{b25674b8-2785-43db-8270-5d76ef9f8dee}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\test.c" />
+  </ItemGroup>
+</Project>
