@@ -23,6 +23,9 @@
 #include "efi/runtimeservices.h"
 #include "efi/systemtable.h"
 
+#define EFI_H_VERSION 0100
+#define EFI_H_VERSION_STRING "1.0"
+
 // The Entry Point prototype, first thing the developer would use...
 typedef EFI_STATUS (EFIAPI *EFI_IMAGE_ENTRY_POINT) (
   IN EFI_HANDLE                  ImageHandle,

@@ -176,4 +176,7 @@
   <ItemGroup>
     <ClCompile Include="..\template\test.c" />
   </ItemGroup>
+  <ItemGroup>
+    <None Include="..\README.md" />
+  </ItemGroup>
 </Project>
