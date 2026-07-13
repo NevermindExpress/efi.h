@@ -90,7 +90,7 @@
     <IncludePath>$(SolutionDir);$(IncludePath)</IncludePath>
     <TargetExt>.efi</TargetExt>
     <GenerateManifest>false</GenerateManifest>
-    <OutDir>$(SolutionDir)Out\$(PlatformTarget)\$(Configuration)\EFI2\BOOT</OutDir>
+    <OutDir>$(SolutionDir)Out\$(PlatformTarget)\$(Configuration)\EFI\BOOT</OutDir>
     <IntDir>$(SolutionDir)Intermediate\$(PlatformTarget)\$(Configuration)\</IntDir>
     <TargetName>bootx64</TargetName>
   </PropertyGroup>
@@ -98,7 +98,7 @@
     <IncludePath>$(SolutionDir);$(IncludePath)</IncludePath>
     <TargetExt>.efi</TargetExt>
     <GenerateManifest>false</GenerateManifest>
-    <OutDir>$(SolutionDir)Out\$(PlatformTarget)\$(Configuration)\EFI2\BOOT</OutDir>
+    <OutDir>$(SolutionDir)Out\$(PlatformTarget)\$(Configuration)\EFI\BOOT</OutDir>
     <IntDir>$(SolutionDir)Intermediate\$(PlatformTarget)\$(Configuration)\</IntDir>
     <TargetName>bootx64</TargetName>
   </PropertyGroup>
@@ -201,6 +201,7 @@
     <ClInclude Include="..\efi\configtable.h" />
     <ClInclude Include="..\efi.h" />
     <ClInclude Include="..\efi\protocols.h" />
+    <ClInclude Include="..\efi\protocols\acpi.h" />
     <ClInclude Include="..\efi\protocols\console.h" />
     <ClInclude Include="..\efi\protocols\console\abspointer.h" />
     <ClInclude Include="..\efi\protocols\console\common.h" />
@@ -210,6 +211,8 @@
     <ClInclude Include="..\efi\protocols\console\simpletextinput.h" />
     <ClInclude Include="..\efi\protocols\console\simpletextinputex.h" />
     <ClInclude Include="..\efi\protocols\console\simpletextoutput.h" />
+    <ClInclude Include="..\efi\protocols\debugger.h" />
+    <ClInclude Include="..\efi\protocols\decompress.h" />
     <ClInclude Include="..\efi\protocols\devicepath.h" />
     <ClInclude Include="..\efi\protocols\drivermodel.h" />
     <ClInclude Include="..\efi\protocols\drivermodel\adapterinfo.h" />
@@ -220,6 +223,7 @@
     <ClInclude Include="..\efi\protocols\drivermodel\override.h" />
     <ClInclude Include="..\efi\protocols\drivermodel\p2dc.h" />
     <ClInclude Include="..\efi\protocols\drivermodel\supportedefiver.h" />
+    <ClInclude Include="..\efi\protocols\iscsi.h" />
     <ClInclude Include="..\efi\protocols\loadedimage.h" />
     <ClInclude Include="..\efi\protocols\media.h" />
     <ClInclude Include="..\efi\protocols\media\atapassthrough.h" />
@@ -238,6 +242,9 @@
     <ClInclude Include="..\efi\protocols\media\ssc.h" />
     <ClInclude Include="..\efi\protocols\media\tape.h" />
     <ClInclude Include="..\efi\protocols\media\ufs.h" />
+    <ClInclude Include="..\efi\protocols\pcibus.h" />
+    <ClInclude Include="..\efi\protocols\scsi.h" />
+    <ClInclude Include="..\efi\protocols\usb.h" />
     <ClInclude Include="..\efi\runtimeservices.h" />
     <ClInclude Include="..\efi\runtimeservices\capsule.h" />
     <ClInclude Include="..\efi\runtimeservices\memory.h" />

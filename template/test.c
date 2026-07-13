@@ -29,6 +29,6 @@ EFI_STATUS EFIAPI EfiMain(IN EFI_HANDLE ImageHandle, EFI_SYSTEM_TABLE *SystemTab
 			}
 		}
 
-		j++;
+		j+=10;
 	}
 }
