@@ -11,3 +11,8 @@
 #include "efi/protocols/usb.h"
 #include "efi/protocols/debugger.h"
 #include "efi/protocols/acpi.h"
+#include "efi/protocols/stringservices.h"
+#include "efi/protocols/ebc.h"
+#include "efi/protocols/fwmgmt.h"
+#include "efi/protocols/network.h"
+#include "efi/protocols/authinfo.h"

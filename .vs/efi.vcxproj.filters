@@ -173,6 +173,22 @@
     <ClInclude Include="..\efi\protocols\acpi.h">
       <Filter>protocols</Filter>
     </ClInclude>
+    <ClInclude Include="..\efi\protocols\stringservices.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\ebc.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\fwmgmt.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\authinfo.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\status.h" />
+    <ClInclude Include="..\efi\protocols\network.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="bootservices">

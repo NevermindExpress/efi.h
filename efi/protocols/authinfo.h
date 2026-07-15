@@ -1,0 +1,25 @@
+#pragma once
+#include "efi/types.h"
+
+// UEFI Spec Section 32.1
+
+#define EFI_AUTHENTICATION_INFO_PROTOCOL_GUID {0x7671d9d0,0x53db,0x4173,{0xaa,0x69,0x23,0x27,0xf2,0x1f,0x0b,0xc7}}
+
+typedef struct _EFI_AUTHENTICATION_INFO_PROTOCOL EFI_AUTHENTICATION_INFO_PROTOCOL; 
+
+typedef EFI_STATUS(EFIAPI *EFI_AUTHENTICATION_INFO_PROTOCOL_GET) (
+	IN EFI_AUTHENTICATION_INFO_PROTOCOL        *This,
+	IN EFI_HANDLE                              ControllerHandle,
+	OUT VOID                                   **Buffer
+	);
+
+typedef EFI_STATUS(EFIAPI *EFI_AUTHENTICATION_INFO_PROTOCOL_SET) (
+	IN EFI_AUTHENTICATION_INFO_PROTOCOL **This,
+	IN EFI_HANDLE *ControllerHandle,
+	IN VOID **Buffer
+);
+
+struct _EFI_AUTHENTICATION_INFO_PROTOCOL {
+	EFI_AUTHENTICATION_INFO_PROTOCOL_GET            Get;
+	EFI_AUTHENTICATION_INFO_PROTOCOL_SET            Set;
+};

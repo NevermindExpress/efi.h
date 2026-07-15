@@ -18,13 +18,14 @@
                                                             */
 
 #include "efi/types.h"
+#include "efi/status.h"
 #include "efi/protocols.h"
 #include "efi/bootservices.h"
 #include "efi/runtimeservices.h"
 #include "efi/systemtable.h"
 
-#define EFI_H_VERSION 0x01010000
-#define EFI_H_VERSION_STRING "1.1"
+#define EFI_H_VERSION 0x01020000
+#define EFI_H_VERSION_STRING "1.2"
 
 // The Entry Point prototype, first thing the developer would use...
 typedef EFI_STATUS (EFIAPI *EFI_IMAGE_ENTRY_POINT) (

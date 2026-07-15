@@ -202,6 +202,7 @@
     <ClInclude Include="..\efi.h" />
     <ClInclude Include="..\efi\protocols.h" />
     <ClInclude Include="..\efi\protocols\acpi.h" />
+    <ClInclude Include="..\efi\protocols\authinfo.h" />
     <ClInclude Include="..\efi\protocols\console.h" />
     <ClInclude Include="..\efi\protocols\console\abspointer.h" />
     <ClInclude Include="..\efi\protocols\console\common.h" />
@@ -223,6 +224,8 @@
     <ClInclude Include="..\efi\protocols\drivermodel\override.h" />
     <ClInclude Include="..\efi\protocols\drivermodel\p2dc.h" />
     <ClInclude Include="..\efi\protocols\drivermodel\supportedefiver.h" />
+    <ClInclude Include="..\efi\protocols\ebc.h" />
+    <ClInclude Include="..\efi\protocols\fwmgmt.h" />
     <ClInclude Include="..\efi\protocols\iscsi.h" />
     <ClInclude Include="..\efi\protocols\loadedimage.h" />
     <ClInclude Include="..\efi\protocols\media.h" />
@@ -242,8 +245,10 @@
     <ClInclude Include="..\efi\protocols\media\ssc.h" />
     <ClInclude Include="..\efi\protocols\media\tape.h" />
     <ClInclude Include="..\efi\protocols\media\ufs.h" />
+    <ClInclude Include="..\efi\protocols\network.h" />
     <ClInclude Include="..\efi\protocols\pcibus.h" />
     <ClInclude Include="..\efi\protocols\scsi.h" />
+    <ClInclude Include="..\efi\protocols\stringservices.h" />
     <ClInclude Include="..\efi\protocols\usb.h" />
     <ClInclude Include="..\efi\runtimeservices.h" />
     <ClInclude Include="..\efi\runtimeservices\capsule.h" />
@@ -251,6 +256,7 @@
     <ClInclude Include="..\efi\runtimeservices\misc.h" />
     <ClInclude Include="..\efi\runtimeservices\time.h" />
     <ClInclude Include="..\efi\runtimeservices\variable.h" />
+    <ClInclude Include="..\efi\status.h" />
     <ClInclude Include="..\efi\systemtable.h" />
     <ClInclude Include="..\efi\types.h" />
   </ItemGroup>
