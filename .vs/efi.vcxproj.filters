@@ -189,6 +189,75 @@
     <ClInclude Include="..\efi\protocols\network.h">
       <Filter>protocols</Filter>
     </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\snp.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\niip.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\pxe.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\bis.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\httpbootcb.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\managed.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\bluetooth.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\vlan.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\eap.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\wifi.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\supplicant.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\tcp.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\ip.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\ipsec.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\ftp.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\tls.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\arp.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\dhcp.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\dns.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\http.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\rest.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\udp.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\network\mtftp.h">
+      <Filter>protocols\network</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="bootservices">
@@ -208,6 +277,9 @@
     </Filter>
     <Filter Include="protocols\media">
       <UniqueIdentifier>{1872b478-2c1c-49b6-b37c-4b097dfbe761}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocols\network">
+      <UniqueIdentifier>{77052f0a-e4b7-419f-b19e-0503fdad46e0}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

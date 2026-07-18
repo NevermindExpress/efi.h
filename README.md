@@ -71,8 +71,23 @@ and a sample .c file is given in the `template` folder.
 ## TODO
  
 - [ ] `Print()` and other convenience helpers
-- [ ] Support for ARM, RISC-V and Itanium
+- [ ] Support for
+	- [ ] ARM 
+	- [ ] RISC-V 
+	- [ ] Itanium
 - [ ] Remaining sections of UEFI Specification
+	- [X] PCI, (i)SCSI, USB (Sections 14-17)
+	- [X] Debugger Support Protocol (Section 18)
+	- [X] ACPI Protocols
+	- [X] String Services
+	- [X] Network Protocols (Sections 24-30)
+	- [ ] Redfish Service (Section 31)
+	- [X] Secure Boot Authentication Info Protocol (Section 32.1)
+	- [ ] Human Interface Infrastructure (Sections 33-35)
+	- [ ] User Information (Section 36)
+	- [ ] Secure Technologies (Section 37)
+	- [ ] CC Measurement Protocol (Section 38)
+	- [ ] Miscellaneous Protocols (Section 39)
 - [ ] Better formatting for headers
 
 ## A note to UEFI Forum and Intel Corporation
@@ -87,6 +102,7 @@ a bunch of amateurs. Some examples:
 - Stray backslash before star (`\*`) in function typedefs (i.e. `EFI_SET_STATE`)
 - Typedefs using field names instead of actual typedef names in all Runtime Services (Section 8) (i.e. `typedef EFI_STATUS (EFIAPI *GetVariable)` instead of `typedef EFI_STATUS (EFIAPI *EFI_GET_VARIABLE)`)
 while Boot Services (Section 7) and other sections having proper typedefs.
+- Empty or wrong struct field names (i.e. `EFI_MTFTP6_PARSE_OPTIONS   ;`)
 - Mismatched delimiters in `SMBIOS3_TABLE_GUID`'s macro body
 - `EFI_ACPI_20_TABLE_GUID` defined twice with conflicting bodies
 - A stray trailing `*` in the `ACPI_10_TABLE_GUID` alias

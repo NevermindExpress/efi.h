@@ -17,7 +17,7 @@ struct file {
 	char name[128];
 };
 
-struct file files[96] = { 0 };
+struct file files[128] = { 0 };
 int nFiles = 0;
 FILE* out = NULL;
 char line[1024] = "";
