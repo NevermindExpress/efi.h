@@ -200,6 +200,7 @@
     <ClInclude Include="..\efi\bootservices\tpl.h" />
     <ClInclude Include="..\efi\configtable.h" />
     <ClInclude Include="..\efi.h" />
+    <ClInclude Include="..\efi\helper.h" />
     <ClInclude Include="..\efi\protocols.h" />
     <ClInclude Include="..\efi\protocols\acpi.h" />
     <ClInclude Include="..\efi\protocols\authinfo.h" />

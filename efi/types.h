@@ -22,7 +22,7 @@ typedef unsigned long long UINT64;
 // typedef __int128 UINT128;
 // typedef __int128 UINT128;
 typedef char CHAR8;
-typedef short CHAR16;
+typedef unsigned short CHAR16;
 typedef void VOID;
 
 // Types
@@ -104,3 +104,8 @@ typedef struct {
 #else
 	#error Unsupported architecture.
 #endif
+
+// Helper macros
+#define TRUE 1
+#define FALSE 0
+#define EFI_ERROR(Status) (((INTN)(Status)) < 0)

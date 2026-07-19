@@ -48,6 +48,12 @@ including `efi.h` on source files.
 file of a tree of headers (located in root of this repository) to be used with this source tree
 (`efi` folder and `efi.h` on source file)
 
+### Helper Functions
+Since `efi.h` is a header-only library, it requires one extra step to be able to use helper functions.
+
+You must add `#define EFI_H_HELPER_IMPLEMENTATION` definition at **exactly one** C file, and call `EfiHInitHelpers(SystemTable)` function. 
+Then you will be able to use helper functions elsewhere without any extra steps.
+
 ### A minimal application
 
 ```c
@@ -70,7 +76,7 @@ and a sample .c file is given in the `template` folder.
 
 ## TODO
  
-- [ ] `Print()` and other convenience helpers
+- [X] `Print()` and other convenience helpers
 - [ ] Support for
 	- [ ] ARM 
 	- [ ] RISC-V 

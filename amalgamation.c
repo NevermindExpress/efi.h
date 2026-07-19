@@ -37,20 +37,20 @@ void readFile(char* file) {
 			continue;
 		else if (line[0] == '\n') // Skip empty lines
 			continue;
-		else if (!strncmp("#include", line, 8)) {
-			// We got an #include, get the included file name
-			char* inc = line + 8;
+		else if (!strncmp("#include \"", line, 10)) {
+			// We got an #include "...", get the included file name
+			// #include <...> are ignored because they are for compiler-internal headers i.e. <stdarg.h> and are not meant to be amalgamated.
+			char* inc = line + 10;
 			while (inc[0] == ' ') inc++; // Skip whitespace
-			inc++; // Skip " or <
 			char* end = line + strlen(line);
-			while (end[0] != '\"' && end[0] != '<') {
+			while (end[0] != '\"') {
 				end--;
 				if (end <= inc) {
 					printf("[-] Invalid #include directive \"%s\"", line); exit(1);
 				}
 			}
 			int sz = end - inc;
-			// Search whether it'S been included before
+			// Search whether it has been included before
 			bool found = false;
 			for (size_t i = 0; i < nFiles; i++) {
 				if (!strncmp(inc, files[i].name, sz)) {

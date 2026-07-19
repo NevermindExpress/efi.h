@@ -258,6 +258,7 @@
     <ClInclude Include="..\efi\protocols\network\mtftp.h">
       <Filter>protocols\network</Filter>
     </ClInclude>
+    <ClInclude Include="..\efi\helper.h" />
   </ItemGroup>
   <ItemGroup>
     <Filter Include="bootservices">
