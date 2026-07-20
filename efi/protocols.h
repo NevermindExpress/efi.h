@@ -16,3 +16,5 @@
 #include "efi/protocols/fwmgmt.h"
 #include "efi/protocols/network.h"
 #include "efi/protocols/authinfo.h"
+#include "efi/protocols/ccmeasurement.h"
+#include "efi/protocols/misc.h"

@@ -22,7 +22,7 @@ and also a native development experience on Visual Studio.
 
 ## Specification coverage
  
-Sections 2 through 13 of the UEFI 2.11 specification are implemented:
+Sections 2 through 30 and several later sections of the UEFI 2.11 specification are implemented:
  
 - Base types and data structures (Section 2)
 - EFI System Table and Configuration Table (Section 4)
@@ -35,6 +35,16 @@ Sections 2 through 13 of the UEFI 2.11 specification are implemented:
   Pointer, Serial I/O, Graphics Output Protocol (Section 12)
 - Media Access - Simple File System, File Protocol, Block I/O, Disk I/O,
   and the rest of Section 13's device/media protocols
+- PCI, (i)SCSI, USB support (Sections 14-17)
+- Debugger Support Protocol (Section 18)
+- ACPI Protocols (Section 20)
+- String Services (Section 21)
+- EFI Byte Code Protocol (Section 22)
+- Firmware Management Protocol (Section 23)
+- Network Protocols (Section 24-30)
+- Secure Boot Authentication Info Protocol (Section 32.1)
+- Confidential Computing Measurement Protocol (Section 38)
+- Miscellaneous Protocols (Section 39)
 
 The remaining of the specification is to be added in next updates.
 
@@ -92,8 +102,8 @@ and a sample .c file is given in the `template` folder.
 	- [ ] Human Interface Infrastructure (Sections 33-35)
 	- [ ] User Information (Section 36)
 	- [ ] Secure Technologies (Section 37)
-	- [ ] CC Measurement Protocol (Section 38)
-	- [ ] Miscellaneous Protocols (Section 39)
+	- [X] CC Measurement Protocol (Section 38)
+	- [X] Miscellaneous Protocols (Section 39)
 - [ ] Better formatting for headers
 
 ## A note to UEFI Forum and Intel Corporation

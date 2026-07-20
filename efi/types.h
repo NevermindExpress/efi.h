@@ -11,6 +11,7 @@
 
 // Integers
 typedef unsigned char BOOLEAN;
+typedef unsigned char BYTE;
 typedef char INT8;
 typedef unsigned char UINT8;
 typedef short INT16;

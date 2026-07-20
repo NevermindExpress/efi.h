@@ -259,6 +259,12 @@
       <Filter>protocols\network</Filter>
     </ClInclude>
     <ClInclude Include="..\efi\helper.h" />
+    <ClInclude Include="..\efi\protocols\misc.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\ccmeasurement.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="bootservices">

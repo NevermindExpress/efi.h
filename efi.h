@@ -25,8 +25,8 @@
 #include "efi/systemtable.h"
 #include "efi/helper.h"
 
-#define EFI_H_VERSION 0x01050000
-#define EFI_H_VERSION_STRING "1.5"
+#define EFI_H_VERSION 0x01060000
+#define EFI_H_VERSION_STRING "1.6"
 
 // The Entry Point prototype, first thing the developer would use...
 typedef EFI_STATUS (EFIAPI *EFI_IMAGE_ENTRY_POINT) (
