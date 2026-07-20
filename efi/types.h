@@ -1,10 +1,10 @@
 #pragma once
 
 // INTN
-#ifdef _M_IX86 || defined(__i386__)
+#if defined(_M_IX86) || defined(__i386__) || defined(_M_ARM) || defined(__arm__) || (defined(__riscv) && __riscv_xlen == 32)
 	typedef int INTN;
 	typedef unsigned int UINTN;
-#elif defined(_M_AMD64) || defined(__x86_64__) || defined(__amd64__)
+#else
 	typedef long long INTN;
 	typedef unsigned long long UINTN;
 #endif
@@ -93,19 +93,19 @@ typedef struct {
 #define CONST const
 
 // Calling conventions
-#ifdef _M_IX86 || defined(__i386__)
+#if defined(_M_IX86) || defined(__i386__)
 	#define EFIAPI __cdecl
 #elif defined(_M_AMD64) || defined(__x86_64__) || defined(__amd64__)
-	#if defined(_MSC_VER) || defined(__Shirley__) && !defined(__clang__)
+	#if (defined(_MSC_VER) || defined(__Shirley__)) && !defined(__clang__)
 		#define EFIAPI // Already always Microsoft x64 ABI
 	#else
 		#define EFIAPI __attribute__((__ms_abi__))
 	#endif
-#else
-	#error Unsupported architecture.
+#else // Others do not require any definition.
+	#define EFIAPI
 #endif
 
-// Helper macros
+// Boolean and error macros
 #define TRUE 1
 #define FALSE 0
 #define EFI_ERROR(Status) (((INTN)(Status)) < 0)

@@ -77,10 +77,10 @@ and a sample .c file is given in the `template` folder.
 ## TODO
  
 - [X] `Print()` and other convenience helpers
-- [ ] Support for
-	- [ ] ARM 
-	- [ ] RISC-V 
-	- [ ] Itanium
+- [X] **(UNTESTED)** Support for
+	- [X] ARM 
+	- [X] RISC-V 
+	- [X] Itanium
 - [ ] Remaining sections of UEFI Specification
 	- [X] PCI, (i)SCSI, USB (Sections 14-17)
 	- [X] Debugger Support Protocol (Section 18)
