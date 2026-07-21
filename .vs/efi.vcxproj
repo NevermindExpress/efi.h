@@ -228,6 +228,7 @@
     <ClInclude Include="..\efi\protocols\drivermodel\supportedefiver.h" />
     <ClInclude Include="..\efi\protocols\ebc.h" />
     <ClInclude Include="..\efi\protocols\fwmgmt.h" />
+    <ClInclude Include="..\efi\protocols\hii.h" />
     <ClInclude Include="..\efi\protocols\iscsi.h" />
     <ClInclude Include="..\efi\protocols\loadedimage.h" />
     <ClInclude Include="..\efi\protocols\media.h" />
@@ -273,9 +274,18 @@
     <ClInclude Include="..\efi\protocols\network\vlan.h" />
     <ClInclude Include="..\efi\protocols\network\wifi.h" />
     <ClInclude Include="..\efi\protocols\pcibus.h" />
+    <ClInclude Include="..\efi\protocols\redfish.h" />
     <ClInclude Include="..\efi\protocols\scsi.h" />
+    <ClInclude Include="..\efi\protocols\secure.h" />
+    <ClInclude Include="..\efi\protocols\secure\hash.h" />
+    <ClInclude Include="..\efi\protocols\secure\kms.h" />
+    <ClInclude Include="..\efi\protocols\secure\memoryprotection.h" />
+    <ClInclude Include="..\efi\protocols\secure\pkcs7.h" />
+    <ClInclude Include="..\efi\protocols\secure\rng.h" />
+    <ClInclude Include="..\efi\protocols\secure\smartcard.h" />
     <ClInclude Include="..\efi\protocols\stringservices.h" />
     <ClInclude Include="..\efi\protocols\usb.h" />
+    <ClInclude Include="..\efi\protocols\user.h" />
     <ClInclude Include="..\efi\runtimeservices.h" />
     <ClInclude Include="..\efi\runtimeservices\capsule.h" />
     <ClInclude Include="..\efi\runtimeservices\memory.h" />

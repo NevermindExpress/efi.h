@@ -97,11 +97,11 @@ and a sample .c file is given in the `template` folder.
 	- [X] ACPI Protocols
 	- [X] String Services
 	- [X] Network Protocols (Sections 24-30)
-	- [ ] Redfish Service (Section 31)
+	- [X] Redfish Service (Section 31)
 	- [X] Secure Boot Authentication Info Protocol (Section 32.1)
 	- [ ] Human Interface Infrastructure (Sections 33-35)
-	- [ ] User Information (Section 36)
-	- [ ] Secure Technologies (Section 37)
+	- [X] User Information (Section 36)
+	- [X] Secure Technologies (Section 37)
 	- [X] CC Measurement Protocol (Section 38)
 	- [X] Miscellaneous Protocols (Section 39)
 - [ ] Better formatting for headers
@@ -126,6 +126,7 @@ while Boot Services (Section 7) and other sections having proper typedefs.
 - Inconsistent use of the legacy `EFI_DEVICE_PATH` name alongside the correct
   `EFI_DEVICE_PATH_PROTOCOL` within the same `EFI_RAM_DISK_REGISTER_RAMDISK`
   function signature
+- Invalid GUID definitions (i.e. `EFI_KMS_FORMAT_MD4_128_GUID`) 
 
 UEFI Forum is not an open source organisation of 3 volunteers getting paid over donations, 
 it is a whole oligarch of a Special Interest Group consisting of 

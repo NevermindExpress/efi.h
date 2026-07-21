@@ -265,6 +265,36 @@
     <ClInclude Include="..\efi\protocols\ccmeasurement.h">
       <Filter>protocols</Filter>
     </ClInclude>
+    <ClInclude Include="..\efi\protocols\redfish.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\user.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\hii.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\secure.h">
+      <Filter>protocols</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\secure\hash.h">
+      <Filter>protocols\secure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\secure\kms.h">
+      <Filter>protocols\secure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\secure\pkcs7.h">
+      <Filter>protocols\secure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\secure\rng.h">
+      <Filter>protocols\secure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\secure\smartcard.h">
+      <Filter>protocols\secure</Filter>
+    </ClInclude>
+    <ClInclude Include="..\efi\protocols\secure\memoryprotection.h">
+      <Filter>protocols\secure</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <Filter Include="bootservices">
@@ -287,6 +317,9 @@
     </Filter>
     <Filter Include="protocols\network">
       <UniqueIdentifier>{77052f0a-e4b7-419f-b19e-0503fdad46e0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="protocols\secure">
+      <UniqueIdentifier>{23ffa931-e6d6-4c38-bcd6-6640c7d8af43}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
   <ItemGroup>

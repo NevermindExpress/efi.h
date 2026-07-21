@@ -1,10 +1,8 @@
 #pragma once
 #include "efi/types.h"
+#include "efi/protocols/hii.h"
 
 #define EFI_DRIVER_HEALTH_PROTOCOL_GUID {0x2a534210,0x9280,0x41d8,{0xae,0x79,0xca,0xda,0x01,0xa2,0xb1,0x27 }}
-
-typedef VOID    *EFI_HII_HANDLE;
-typedef UINT16  EFI_STRING_ID;
 
 // EFI_DRIVER_HEALTH_STATUS
 typedef enum {
