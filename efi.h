@@ -17,6 +17,9 @@
  https://github.com/NevermindExpress/efi.h
                                                             */
 
+#define EFI_H_VERSION 0x01070100
+#define EFI_H_VERSION_STRING "1.7.1"
+
 #include "efi/types.h"
 #include "efi/status.h"
 #include "efi/protocols.h"
@@ -24,9 +27,6 @@
 #include "efi/runtimeservices.h"
 #include "efi/systemtable.h"
 #include "efi/helper.h"
-
-#define EFI_H_VERSION 0x01070000
-#define EFI_H_VERSION_STRING "1.7"
 
 // The Entry Point prototype, first thing the developer would use...
 typedef EFI_STATUS (EFIAPI *EFI_IMAGE_ENTRY_POINT) (

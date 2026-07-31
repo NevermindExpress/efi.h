@@ -112,12 +112,14 @@ A number of genuine errors exist in the UEFI 2.11 specification's own code
 listings that genuinely ridicules the UEFI and make Intel engineers look like
 a bunch of amateurs. Some examples:
  
-- Forgotten comma (`,`) characters in parameter lists (i.e. at `EFI_SD_MMC_PASS_THRU_COMMAND_PACKET`)
+ - Typedefs using field names instead of actual typedef names in all Runtime Services (Section 8) (i.e. `typedef EFI_STATUS (EFIAPI *GetVariable)` instead of `typedef EFI_STATUS (EFIAPI *EFI_GET_VARIABLE)`)
+while Boot Services (Section 7) and other sections having proper typedefs.
+- Invalid GUID definitions (i.e. `EFI_KMS_FORMAT_MD4_128_GUID` and especially `EFI_FILE_INFO_ID` that took me some hours of debugging in my EFI application to notice) 
+- Forgotten comma (`,`) characters in parameter lists 
+- (i.e. at `EFI_SD_MMC_PASS_THRU_COMMAND_PACKET`)
 - Forgotten semicolon (`;`) characters in struct definitions (i.e. at `_EFI_SD_MMC_PASS_THRU_PROTOCOL`) 
 - Double backslash (`\\`) in multi-line preprocessor macros (i.e. `EFI_ADAPTER_INFO_CDAT_TYPE_GUID` or `EFI_RT_PROPERTIES_TABLE_GUID`)
 - Stray backslash before star (`\*`) in function typedefs (i.e. `EFI_SET_STATE`)
-- Typedefs using field names instead of actual typedef names in all Runtime Services (Section 8) (i.e. `typedef EFI_STATUS (EFIAPI *GetVariable)` instead of `typedef EFI_STATUS (EFIAPI *EFI_GET_VARIABLE)`)
-while Boot Services (Section 7) and other sections having proper typedefs.
 - Empty or wrong struct field names (i.e. `EFI_MTFTP6_PARSE_OPTIONS   ;`)
 - Mismatched delimiters in `SMBIOS3_TABLE_GUID`'s macro body
 - `EFI_ACPI_20_TABLE_GUID` defined twice with conflicting bodies
@@ -126,7 +128,6 @@ while Boot Services (Section 7) and other sections having proper typedefs.
 - Inconsistent use of the legacy `EFI_DEVICE_PATH` name alongside the correct
   `EFI_DEVICE_PATH_PROTOCOL` within the same `EFI_RAM_DISK_REGISTER_RAMDISK`
   function signature
-- Invalid GUID definitions (i.e. `EFI_KMS_FORMAT_MD4_128_GUID`) 
 
 UEFI Forum is not an open source organisation of 3 volunteers getting paid over donations, 
 it is a whole oligarch of a Special Interest Group consisting of 

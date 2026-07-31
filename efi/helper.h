@@ -42,7 +42,7 @@ UINTN IntToStr(INT64 value, CHAR16 *out);
 
 // Print() / VPrint() - supported specifiers, kept deliberately small
 // (not a full libc printf): %s (CHAR16*), %a (CHAR8*/ASCII), %d (INT64),
-// %u (UINT64), %x / %X (hex, lower/upper), %c (CHAR16), %%
+// %u (UINT64), %x / %X (hex, lower/upper), %c (CHAR16), %g (EFI_GUID), %%
 VOID EfiHPutStr(CONST CHAR16 *s);
 VOID EfiHPutAsciiStr(CONST CHAR8 *s);
 VOID VPrint(CONST CHAR16 *fmt, va_list args);
@@ -173,6 +173,24 @@ VOID EfiHPutAsciiStr(CONST CHAR8 *s) {
 	}
 }
 
+CHAR16* EfiHPutHex(CHAR16* out, UINT64 v, UINTN digits) {
+	static const CHAR16 hex[] = L"0123456789ABCDEF";
+	while (digits--)
+		*out++ = hex[(v >> (digits * 4)) & 0xF];
+	return out;
+}
+
+CHAR16* EfiHPutGuid(CHAR16* out, const EFI_GUID* g) {
+	out = EfiHPutHex(out, g->Data1, 8);   *out++ = L'-';
+	out = EfiHPutHex(out, g->Data2, 4);   *out++ = L'-';
+	out = EfiHPutHex(out, g->Data3, 4);   *out++ = L'-';
+	out = EfiHPutHex(out, g->Data4[0], 2);
+	out = EfiHPutHex(out, g->Data4[1], 2); *out++ = L'-';
+	for (UINTN i = 2; i < 8; i++)
+		out = EfiHPutHex(out, g->Data4[i], 2);
+	return out;
+}
+
 UINTN EfiHFormatToBuffer(CHAR16 *out, UINTN outMax, CONST CHAR16 *fmt, va_list args) {
 	CHAR16 numbuf[32];
 	UINTN pos = 0;
@@ -229,6 +247,12 @@ UINTN EfiHFormatToBuffer(CHAR16 *out, UINTN outMax, CONST CHAR16 *fmt, va_list a
 			}
 			case L'%': {
 				EFI_H_EMIT(L'%');
+				break;
+			}
+			case L'g': {
+				EFI_GUID* g = va_arg(args, EFI_GUID*);
+				if (g) out = EfiHPutGuid(out, g);
+				else   EfiHPutStr(L"(null)");
 				break;
 			}
 			default: {
