@@ -192,7 +192,7 @@ CHAR16* EfiHPutGuid(CHAR16* out, const EFI_GUID* g) {
 }
 
 UINTN EfiHFormatToBuffer(CHAR16 *out, UINTN outMax, CONST CHAR16 *fmt, va_list args) {
-	CHAR16 numbuf[32];
+	CHAR16 numbuf[37];
 	UINTN pos = 0;
 
 #define EFI_H_EMIT(ch) do { if (pos + 1 < outMax) out[pos++] = (ch); } while (0)
@@ -251,8 +251,12 @@ UINTN EfiHFormatToBuffer(CHAR16 *out, UINTN outMax, CONST CHAR16 *fmt, va_list a
 			}
 			case L'g': {
 				EFI_GUID* g = va_arg(args, EFI_GUID*);
-				if (g) out = EfiHPutGuid(out, g);
-				else   EfiHPutStr(L"(null)");
+				if (g) { 
+					EfiHPutGuid(numbuf, g); 
+					EFI_H_EMIT_STR(numbuf);
+				}
+				else 
+					EFI_H_EMIT_STR(L"(null)");
 				break;
 			}
 			default: {

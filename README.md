@@ -112,6 +112,7 @@ A number of genuine errors exist in the UEFI 2.11 specification's own code
 listings that genuinely ridicules the UEFI and make Intel engineers look like
 a bunch of amateurs. Some examples:
  
+ - Wrong type definition for LoadImage (defined as EFI_IMAGE_UNLOAD instead of EFI_IMAGE_LOAD)
  - Typedefs using field names instead of actual typedef names in all Runtime Services (Section 8) (i.e. `typedef EFI_STATUS (EFIAPI *GetVariable)` instead of `typedef EFI_STATUS (EFIAPI *EFI_GET_VARIABLE)`)
 while Boot Services (Section 7) and other sections having proper typedefs.
 - Invalid GUID definitions (i.e. `EFI_KMS_FORMAT_MD4_128_GUID` and especially `EFI_FILE_INFO_ID` that took me some hours of debugging in my EFI application to notice) 

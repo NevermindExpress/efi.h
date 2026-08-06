@@ -2,3 +2,5 @@ Out
 Intermediate
 *.user
 efi-amalgamation.h
+*.7z
+*.zip

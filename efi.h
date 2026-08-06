@@ -15,10 +15,10 @@
                          | |         `'--' | '.    | '.  
                          |_|               '---'   '---' 
  https://github.com/NevermindExpress/efi.h
-                                                            */
+                                                         */
 
-#define EFI_H_VERSION 0x01070100
-#define EFI_H_VERSION_STRING "1.7.1"
+#define EFI_H_VERSION 0x01070200
+#define EFI_H_VERSION_STRING "1.7.2"
 
 #include "efi/types.h"
 #include "efi/status.h"
